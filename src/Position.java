@@ -2,6 +2,10 @@ public class Position {
     private int x;
     private int y;
 
+    public Position(Position position){
+        this.setX(position.x);
+        this.setY(position.y);
+    }
     public Position(int x, int y){
         this.x = x;
         this.y = y;
@@ -22,7 +26,7 @@ public class Position {
         this.y = y;
     }
     public String toString() {
-        String s = "Position { x = " + this.x + ", y = " + this.y + " } ";
+        String s = "Position { x = " + this.x + ", y = " + this.y + " }";
         return s;
     }
 }
