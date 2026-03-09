@@ -1,13 +1,26 @@
 public class Kreis {
     private int radius = 1;
+    private Position position;
+    private Farbe farbe = Farbe.rot;
+    public static final String CLASS_NAME = "Kreis";
 
-    public Kreis(Kreis kreis){
+    public Kreis(Kreis kreis) {
         this.setRadius(kreis.radius);
+        this.position = new Position();
     }
-    public Kreis(int radius){
+
+    public Kreis(int radius) {
         this.setRadius(radius);
+        this.position = new Position();
     }
-    public Kreis(){
+
+    public Kreis(int radius, int x, int y, Farbe farbe) {
+        this.radius = radius;
+        this.position = new Position(x, y);
+        this.farbe = farbe;
+    }
+
+    public Kreis() {
         this.setRadius(3);
     }
 
@@ -22,6 +35,22 @@ public class Kreis {
             this.radius = radius;
     }
 
+    public Position getPosition() {
+        return this.position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
+    public Farbe getFarbe() {
+        return this.farbe;
+    }
+
+    public void setFarbe(Farbe farbe) {
+        this.farbe = farbe;
+    }
+
     public double berechneFlaeche() {
         return Math.PI * (this.radius * this.radius);
     }
@@ -31,9 +60,10 @@ public class Kreis {
     }
 
     public String toString() {
-        String s = "Kreis { Radius = " + this.radius + ", ";
-        s = s + "Umfang = " + this.berechneUmfang() + ", ";
-        s = s + "Fläche = " + this.berechneFlaeche() + " }";
+        String s = "Kreis { Radius = " + this.radius + ", " +
+                "Umfang = " + this.berechneUmfang() + ", " +
+                "Fläche = " + this.berechneFlaeche() + " }" +
+                ", " + this.position + ", Farbe: " + this.farbe + "}";
         return s;
     }
 }

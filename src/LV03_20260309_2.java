@@ -12,8 +12,8 @@ public class LV03_20260309_2 {
         for (int i = 0; i < myRechtecke.length; i++)
             System.out.println(myRechtecke[i]);
 
-        myRechtecke[3].position.setX(8);
-        myRechtecke[3].position.setY(9);
+        myRechtecke[3].getPosition().setX(8);
+        myRechtecke[3].getPosition().setY(9);
         myRechtecke[3].setFarbe(Farbe.gelb);
 
         System.out.println("Ausgabe Rechteck-Array");

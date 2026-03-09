@@ -1,7 +1,7 @@
 public class Rechteck {
     private int laenge;
     public int breite;
-    public Position position;
+    private Position position;
     private Farbe farbe = Farbe.rot;
     public static final String CLASS_NAME = "Rechteck";
     public static String Bezeichnung = "unbekannt";
@@ -51,6 +51,13 @@ public class Rechteck {
             this.laenge = 0;
         else
             this.laenge = laenge;
+    }
+
+    public Position getPosition(){
+        return this.position;
+    }
+    public void setPosition(Position position){
+        this.position = position;
     }
 
     public Farbe getFarbe(){
