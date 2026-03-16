@@ -1,12 +1,16 @@
-public class Kreis {
+public class Kreis extends Form{
     private int radius = 1;
-    private Position position;
-    private Farbe farbe = Farbe.rot;
+    //private Position position;
+    //private Farbe farbe = Farbe.rot;
     public static final String CLASS_NAME = "Kreis";
+
+    public Kreis(int radius, Position position, Farbe farbe){
+        this(radius, position.getX(), position.getY(), farbe);
+    }
 
     public Kreis(Kreis kreis) {
         this.setRadius(kreis.radius);
-        this.position = new Position();
+        this.position = new Position(kreis.position);
     }
 
     public Kreis(int radius) {
@@ -34,7 +38,7 @@ public class Kreis {
         else
             this.radius = radius;
     }
-
+    /*
     public Position getPosition() {
         return this.position;
     }
@@ -50,7 +54,7 @@ public class Kreis {
     public void setFarbe(Farbe farbe) {
         this.farbe = farbe;
     }
-
+    */
     public double berechneFlaeche() {
         return Math.PI * (this.radius * this.radius);
     }
@@ -59,14 +63,22 @@ public class Kreis {
         return 2 * Math.PI * this.radius;
     }
 
+    public void display(){
+        System.out.println(this);
+    }
+
+    public void scale(int scaleFaktor){
+        this.radius = this.radius * scaleFaktor;
+    }
+
+    public static void printClassName(){
+        System.out.println(CLASS_NAME);
+    }
     public String toString() {
-        String s = "Kreis { Radius = " + this.radius + ", " +
+        String s = CLASS_NAME + " { Radius = " + this.radius + ", " +
                 "Umfang = " + this.berechneUmfang() + ", " +
-                "Fläche = " + this.berechneFlaeche() + " }" +
-                ", " + this.position + ", Farbe: " + this.farbe + "}";
+                "Fläche = " + this.berechneFlaeche() +
+                ", " + this.position + ", Farbe: " + this.farbe + " }";
         return s;
     }
 }
-
-
-

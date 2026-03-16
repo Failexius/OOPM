@@ -1,19 +1,25 @@
-public class Rechteck {
+public class Rechteck extends Form{
     private int laenge;
     public int breite;
-    private Position position;
-    private Farbe farbe = Farbe.rot;
+    //private Position position;
+    //private Farbe farbe = Farbe.rot;
     public static final String CLASS_NAME = "Rechteck";
     public static String Bezeichnung = "unbekannt";
 
     public Rechteck(int laenge, int breite, int x, int y, Farbe farbe) {
+        super(farbe, new Position(x,x));
         this.setLaenge(laenge);
         this.breite = breite;
         //this.position = new Position();
         //position.setX(x);
         //position.setY(y);
-        this.position = new Position(x, y);
-        this.farbe = farbe;
+
+        //this.position = new Position(x, y);
+        //this.farbe = farbe;
+    }
+
+    public Rechteck(int laenge, int breite, Position position, Farbe farbe){
+        this(laenge, breite, position.getX(), position.getY(), farbe);
     }
 
     public Rechteck(Rechteck rechteck) {
@@ -53,6 +59,7 @@ public class Rechteck {
             this.laenge = laenge;
     }
 
+    /*
     public Position getPosition(){
         return this.position;
     }
@@ -67,12 +74,12 @@ public class Rechteck {
     public void setFarbe(Farbe farbe){
         this.farbe = farbe;
     }
-
-    public int berechneFlaeche() {
+    */
+    public double berechneFlaeche() {
         return this.laenge * this.breite;
     }
 
-    public int berechneUmfang() {
+    public double berechneUmfang() {
         return (this.laenge + this.breite) * 2;
     }
 
@@ -81,23 +88,24 @@ public class Rechteck {
         this.breite = this.breite * scaleBreite;
     }
 
+    public void display() {
+        System.out.println(this);
+    }
+
     public void scale(int scaleFaktor) {
         this.setLaenge(this.getLaenge() * scaleFaktor);
         this.breite = this.breite * scaleFaktor;
     }
 
     public static void printClassName(){
-        System.out.println("Rechteck");
+        System.out.println(CLASS_NAME);
     }
 
     public String toString() {
-        String s = "Rechteck { Länge = " + this.laenge + ", Breite = " + this.breite + ", " +
+        String s = CLASS_NAME + " { Länge = " + this.laenge + ", Breite = " + this.breite + ", " +
                 "Umfang = " + this.berechneUmfang() + ", " +
                 "Fläche = " + this.berechneFlaeche() + ", " +
-                this.position + ", Farbe: " + this.farbe + "}";
+                this.position + ", Farbe: " + this.farbe + " }";
         return s;
     }
 }
-
-
-
