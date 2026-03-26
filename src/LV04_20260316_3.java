@@ -2,7 +2,7 @@ public class LV04_20260316_3 {
     static void main(String[] args) {
         Kreis myKreis = new Kreis(2, new Position(-1, -1), Farbe.gruen);
         Rechteck myRechteck = new Rechteck(6, 4, new Position(-1, 1), Farbe.gelb);
-        Form[] myFormen = new Form[4];
+        Form[] myFormen = new Form[5];
 
         System.out.println(myKreis);
         System.out.println(myRechteck);
@@ -13,6 +13,9 @@ public class LV04_20260316_3 {
         myFormen[2] = new Kreis();
         myFormen[2].setFarbe(Farbe.blau);
         myFormen[3] = new Rechteck(8, 4);
+        //am 26.03.2026 als abstrakt definiert
+        //myFormen[4] = new Form();
+        myFormen[4] = new Quadrat();
 
         for (int i = 0; i < myFormen.length; i++) {
             System.out.println(myFormen[i]);

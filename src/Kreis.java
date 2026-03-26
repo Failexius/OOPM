@@ -76,8 +76,8 @@ public class Kreis extends Form{
     }
     public String toString() {
         String s = CLASS_NAME + " { Radius = " + this.radius + ", " +
-                "Umfang = " + this.berechneUmfang() + ", " +
-                "Fläche = " + this.berechneFlaeche() +
+                "Umfang = " + String.format("%.2f", this.berechneUmfang())  + ", " +
+                "Fläche = " + String.format("%.2f", this.berechneFlaeche()) +
                 ", " + this.position + ", Farbe: " + this.farbe + " }";
         return s;
     }

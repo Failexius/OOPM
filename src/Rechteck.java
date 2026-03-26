@@ -1,5 +1,5 @@
-public class Rechteck extends Form{
-    private int laenge;
+public class Rechteck extends Form {
+    protected int laenge;
     public int breite;
     //private Position position;
     //private Farbe farbe = Farbe.rot;
@@ -7,7 +7,7 @@ public class Rechteck extends Form{
     public static String Bezeichnung = "unbekannt";
 
     public Rechteck(int laenge, int breite, int x, int y, Farbe farbe) {
-        super(farbe, new Position(x,x));
+        super(farbe, new Position(x, y));
         this.setLaenge(laenge);
         this.breite = breite;
         //this.position = new Position();
@@ -18,7 +18,7 @@ public class Rechteck extends Form{
         //this.farbe = farbe;
     }
 
-    public Rechteck(int laenge, int breite, Position position, Farbe farbe){
+    public Rechteck(int laenge, int breite, Position position, Farbe farbe) {
         this(laenge, breite, position.getX(), position.getY(), farbe);
     }
 
@@ -97,7 +97,7 @@ public class Rechteck extends Form{
         this.breite = this.breite * scaleFaktor;
     }
 
-    public static void printClassName(){
+    public static void printClassName() {
         System.out.println(CLASS_NAME);
     }
 

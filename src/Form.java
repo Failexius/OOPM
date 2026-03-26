@@ -1,4 +1,4 @@
-public class Form {
+public abstract class Form {
     protected Position position;
     protected Farbe farbe;
     public static final String CLASS_NAME = "Form";
@@ -36,13 +36,19 @@ public class Form {
     public void setFarbe(Farbe farbe) {
         this.farbe = farbe;
     }
-
+    /*
     public double berechneFlaeche(){
         return 0;
     }
+    */
+    public abstract double berechneFlaeche();
+    /*
     public double berechneUmfang(){
         return 0;
     }
+    */
+    public abstract double berechneUmfang();
+
     public String toString(){
         String s = CLASS_NAME + " { " +
                 this.position + ", " +
