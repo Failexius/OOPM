@@ -1,4 +1,6 @@
-public class Quadrat extends Rechteck {
+import java.util.Scanner;
+
+public class Quadrat extends Rechteck{
     public final String CLASS_NAME = "Quadrat";
 
     public Quadrat() {
@@ -21,6 +23,15 @@ public class Quadrat extends Rechteck {
         "Fläche = " + this.berechneFlaeche() + ", " +
         this.position + ", Farbe: " + this.farbe + " }";
         return s;
+    }
+
+    public void scan() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quadrat");
+        position.scan();
+        System.out.println("Seitenlänge: ");
+        laenge = sc.nextInt();
+        breite = laenge;
     }
 }
 

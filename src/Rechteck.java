@@ -1,4 +1,6 @@
-public class Rechteck extends Form {
+import java.util.Scanner;
+
+public class Rechteck extends Form implements Scanable {
     protected int laenge;
     public int breite;
     //private Position position;
@@ -101,6 +103,15 @@ public class Rechteck extends Form {
         System.out.println(CLASS_NAME);
     }
 
+    public void scan(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Rechteck");
+        position.scan();
+        System.out.println("Länge: ");
+        this.setLaenge(sc.nextInt());
+        System.out.println("Breite: ");
+        this.breite = sc.nextInt();
+    }
     public String toString() {
         String s = CLASS_NAME + " { Länge = " + this.laenge + ", Breite = " + this.breite + ", " +
                 "Umfang = " + this.berechneUmfang() + ", " +

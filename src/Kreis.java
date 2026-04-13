@@ -1,4 +1,6 @@
-public class Kreis extends Form{
+import java.util.Scanner;
+
+public class Kreis extends Form implements Scanable{
     private int radius = 1;
     //private Position position;
     //private Farbe farbe = Farbe.rot;
@@ -80,5 +82,13 @@ public class Kreis extends Form{
                 "Fläche = " + String.format("%.2f", this.berechneFlaeche()) +
                 ", " + this.position + ", Farbe: " + this.farbe + " }";
         return s;
+    }
+
+    public void scan() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Kreis");
+        position.scan();
+        System.out.println("Radius: ");
+        this.radius = sc.nextInt();
     }
 }
