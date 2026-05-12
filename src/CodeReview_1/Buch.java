@@ -1,6 +1,6 @@
 package CodeReview_1;
 
-public class Buch extends Medien {
+public class Buch extends Medien{
     private String Autor;
     private int seitenAnzahl;
 
@@ -44,4 +44,5 @@ public class Buch extends Medien {
         String s = "Autor: " + getAutor() + ", Seiten: " + getSeitenAnzahl();
         return s;
     }
+    // void scan();
 }

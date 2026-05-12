@@ -1,5 +1,8 @@
 package CodeReview_1;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class test {
     static void main(String[] args) {
         Buch myBuch = new Buch();
@@ -16,5 +19,9 @@ public class test {
         for (int i = 0; i < myMedien.length; i++) {
             System.out.println(myMedien[i]);
         }
+
+        List<Buch> myBuchList = new LinkedList<Buch>();
+            myBuchList.add(myBuch);
+            myBuchList.add(new Buch("hallo", 13));
     }
 }

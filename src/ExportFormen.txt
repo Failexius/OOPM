@@ -1,0 +1,7 @@
+Inhalt myFormList sorted by Fläche
+Rechteck { Länge = 4, Breite = 3, Umfang = 14.0, Fläche = 12.0, Position { x = 1, y = 1, Quadrant: 1 }, Farbe: rot };
+Rechteck { Länge = 9, Breite = 6, Umfang = 30.0, Fläche = 54.0, Position { x = 1, y = 1, Quadrant: 1 }, Farbe: rot };
+Quadrat { Seitenlänge = 8, Umfang = 32.0, Fläche = 64.0, Position { x = 1, y = 1, Quadrant: 1 }, Farbe: rot };
+Kreis { Radius = 5, Umfang = 31,42, Fläche = 78,54, Position { x = 1, y = 1, Quadrant: 1 }, Farbe: rot };
+Kreis { Radius = 9, Umfang = 56,55, Fläche = 254,47, Position { x = 1, y = 1, Quadrant: 1 }, Farbe: rot };
+Kreis { Radius = 12, Umfang = 75,40, Fläche = 452,39, Position { x = 1, y = 1, Quadrant: 1 }, Farbe: rot };
