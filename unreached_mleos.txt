@@ -1,0 +1,51 @@
+UNREACHED / OPEN MLEO LIST
+==============================
+
+ID: MLEO_05_03 (Block 6)
+Description: implement 1:n relations with Collections.
+--------------------------------------------------
+ID: MLEO_05_04 (Block 6)
+Description: implement n:m relations Collections.
+--------------------------------------------------
+ID: MLEO_05_05 (Block 6)
+Description: use streams, lambdas and method references to work with collections.
+--------------------------------------------------
+ID: MLEO_05_06 (Block 7)
+Description: implement custom data containers that support insert, read, delete, and edit operations as well as sorting and filtering.
+--------------------------------------------------
+ID: MLEO_06_01 (Block 8)
+Description: able to create and throw checked and unchecked exceptions.
+--------------------------------------------------
+ID: MLEO_06_02 (Block 8)
+Description: implement custom exception.
+--------------------------------------------------
+ID: MLEO_06_03 (Block 8)
+Description: throw new exception.
+--------------------------------------------------
+ID: MLEO_06_04 (Block 8)
+Description: handle exception correctly.
+--------------------------------------------------
+ID: MLEO_07_01 (Block 9)
+Description: export data in text-based formats with correct exception handling.
+--------------------------------------------------
+ID: MLEO_07_02 (Block 9)
+Description: import data in csv format with correct exception handling.
+--------------------------------------------------
+ID: MLEO_08_01 (Block 10)
+Description: design, write and execute tests for a single method in a class using a unit test framework.
+--------------------------------------------------
+ID: MLEO_08_02 (Block 10)
+Description: design, write and execute unit tests using a unit test framework.
+--------------------------------------------------
+ID: MLEO_11_01 (Block 11)
+Description: identify actors based on a problem statement.
+--------------------------------------------------
+ID: MLEO_11_02 (Block 11)
+Description: identify messages and message types.
+--------------------------------------------------
+ID: MLEO_11_03 (Block 11)
+Description: identify lifelines and activations.
+--------------------------------------------------
+ID: MLEO_11_04 (Block 11)
+Description: identify fragments and fragment types.
+--------------------------------------------------

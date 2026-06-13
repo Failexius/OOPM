@@ -27,5 +27,8 @@ bin/
 ### VS Code ###
 .vscode/
 
+### Java ###
+*.class
+
 ### Mac OS ###
 .DS_Store
