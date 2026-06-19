@@ -12,10 +12,12 @@ public class Main {
         Student s1 = new Student(101, "Alice");
         Student s2 = new Student(102, "Bob");
         Student s3 = new Student(103, "Charlie");
+        Student s4 = new Student(104, "David");
 
         itDept.addStudent(s1);
         itDept.addStudent(s2);
         itDept.addStudent(s3);
+        itDept.addStudent(s4);
         System.out.println(itDept);
 
         Course javaCourse = new Course("CS101", "Java Programming");
@@ -25,6 +27,7 @@ public class Main {
             s1.enroll(javaCourse);
             s1.enroll(dbCourse);
             s2.enroll(javaCourse);
+            s4.enroll(javaCourse);
             // MLEO_06_03: Triggering custom exception
             // s1.enroll(javaCourse); 
         } catch (EnrollmentException e) {
@@ -38,6 +41,7 @@ public class Main {
         container.add(s1);
         container.add(s2);
         container.add(s3);
+        container.add(s4);
 
         System.out.println("\nSorting students by name...");
         container.sortByName();
